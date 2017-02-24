@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="iso-8859-2">
+  <meta name="description" content="bernard_js&html">
+  <title>Bernard</title>
+  <style>
+ 
+  body {
+  height:100%
+  width: 100%;
+  }
+  
+  h1 {
+  text-align: center;
+  font-family: Comic Sans MS;
+  background-color: rgba(250, 250, 151, .8);
+  padding-top: 20px;
+  padding-bottom: 20px;
+  
+  }
+  
+  p {
+  width: 75%;
+  text-align: justify;
+  font-family: Calibri;
+  font-size: 20px;
+  line-height: 2;
+  letter-spacing: 3px;
+  background-color: rgba(250, 250, 151, .6);
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border-top: 5px solid #ffe95e;
+  border-bottom: 5px solid #ffe94e;
+  
+  }
+  
+  img {
+  float: left;
+  border: 10px;
+  margin-left: 50px;
+  margin-right: 50px;
+  }
+  
+  #button {
+  position: relative;
+  left: 50%;
+  margin-left: -125px;
+  margin-top: 50px;
+  }
+  
+  button {
+  width: 250px;
+  height: 50px;
+  background: #ffab10;
+  color: white;
+  font-family: Calibri;
+  font-size: 20px;
+  shadow: ;
+  border: none;
+  border-radius: 10px;
+  text-align: center;
+  
+  }
+  button:hover {
+  background: #e69900;
+  cursor: pointer;
+  }
+  </style>
+</head>
+<body style="background: url('http://previews.123rf.com/images/kurapy11/kurapy111401/kurapy11140100040/25093259-Plastic-letters-scattered-on-white-background--Stock-Photo.jpg')">
+  <h1>Szevasztok! Bemutatom új barátunkat, Bernardot.</h1>
+  <div>
+    <span>
+  <img src=Bernard.jpg alt="Ő Bernard" title="Bernard"/>
+    </span>
+  <span>
+    <p>Bernard egy robot. Én építettem. Nagyon okos. Még csak egy feladatot tud elvégezni, de azt gyorsan és pontosan. Még fiatal ezért gyakorolnia kell. Kérlek, légy egy kicsit az edzője. Kattints a gombra, és kövesd az utasításokat! Nem fogsz csalódni. :-)</p>
+  </span>
+  <div id="button">
+  <button type="button" onclick="bernardTheLetterCounter ()"><b>Csapjunk bele!<b></button>
+  </div>
+  <script>
+  function bernardTheLetterCounter () {
+  var sentence=prompt('Szervusz gazdám! Kérlek tesztelj engem. Írj nekem egy mondatot, amivel dolgozhatok!');
+  var letter=prompt('Köszönöm, nagyon szép mondat. Melyik betűt számoljam meg?');
+  var sumLetter=0;
+  var sentenceLength=sentence.length;
+  for (var letterCounter=0;letterCounter<=sentenceLength;letterCounter++) {
+    if (sentence.charAt(letterCounter)==letter) {
+      sumLetter++;
+    };
+  };
+  alert('Ebben a szövegben '+sumLetter+' darab '+letter+' betű található.');  
+    return;
+}
+
+  </script>
+</body>
+</html>
