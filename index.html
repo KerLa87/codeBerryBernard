@@ -84,13 +84,15 @@
   <button type="button" onclick="bernardTheLetterCounter ()"><b>Csapjunk bele!<b></button>
   </div>
   <script>
-  function bernardTheLetterCounter () {
+   function bernardTheLetterCounter () {
   var sentence=prompt('Szervusz gazdám! Kérlek tesztelj engem. Írj nekem egy mondatot, amivel dolgozhatok!');
-  var letter=prompt('Köszönöm, nagyon szép mondat. Melyik betût számoljam meg?');
+  var lowerSentence=sentence.toLowerCase();
+  var letter=prompt('Köszönöm, nagyon szép mondat. Melyik betűt számoljam meg?');
+  var lowerLetter=letter.toLowerCase();
   var sumLetter=0;
   var sentenceLength=sentence.length;
   for (var letterCounter=0;letterCounter<=sentenceLength;letterCounter++) {
-    if (sentence.charAt(letterCounter)==letter) {
+    if (lowerSentence.charAt(letterCounter)==lowerLetter) {
       sumLetter++;
     };
   };
